@@ -1,22 +1,13 @@
 # quox
 
-We envision a fundamentally new way to develop desktop applications for Windows, macOS, and Linux from the same code base.
-
-## What We Have
-
-quox (pronouced like _quarks_) is more than an idea.
-We have a concrete [plan](./plan).
-
-However, there is no demo yet.
-
-We have implemented many individual parts of quox already, but there are still some core components that are missing.
+With quox (pronouced like _quarks_), we envision a fundamentally new way to develop desktop applications for Windows, macOS, and Linux from the same code base.
 
 ## What We Want
 
 [Electron](https://www.electronjs.org/) was a major step forward towards cross-platform applications.
 However, it is successful despite a number of serious drawbacks, mainly regarding performance, developer experience, and security.
 
-quox fixes all of them at once by rethinking the entire stack.
+quox fixes all of them at once by rethinking the entire stack of technologies.
 
 Instead of taking HTML, CSS, and JavaScript, and bundling both Node and Chromium with it into a gigantic executable, you can take a TSX file and run it directly.
 Windowing, layouting, composing, rendering, and input handling are all done via library calls.
@@ -60,6 +51,15 @@ A direct consequence our approach is that quox can do things nobody else can do:
 3. Secure your _entire_ desktop application via a sandbox, with interactive permissions if desired
 4. Have hot module replacement (HMR) out of the box during development
 
+## What We Have
+
+quox is more than an idea.
+We have a concrete [plan](./plan).
+
+However, there is no demo yet.
+
+We have implemented many individual parts of quox already, but there are still some core components that are missing.
+
 ## Who We Are
 
 We are a small team of volunteers with too little time who do open-source work.
@@ -70,3 +70,5 @@ Don't expect a release in the next few weeks.
 
 It also means that we can give time to the underlying technologies to mature, and to impact their development in a direction that suits us.
 We are early, but not wrong.
+
+Come [join us](https://github.com/quoxlabs)!
