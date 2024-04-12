@@ -26,5 +26,9 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/quoxlabs/quox" },
     ],
+    editLink: {
+      text: "Improve this page",
+      pattern: "https://github.com/quoxlabs/website/edit/main/:path",
+    },
   },
 });
