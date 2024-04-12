@@ -57,6 +57,7 @@ quox is more than an idea.
 We have a concrete [plan](./plan).
 
 However, there is no demo yet.
+The above code snippet illustrates what we aim for, but it does not run yet.
 
 We have implemented many individual parts of quox already, but there are still some core components that are missing.
 

@@ -42,9 +42,9 @@ In finding out where our assumptions were incorrect, we also developed this very
 ## Stage 1: Solving Problems Individually (Current)
 
 A main insight during stage 0 was that servo actually does not solely rely on `wgpu` for its rendering.
-It relies on a much larger dependency tree for rendering.
-Most of them call into native graphics libraries in the end.
-This cannot be compiled to WASM.
+It relies on a much larger dependency tree for that.
+Most of the consumed libraries call into native graphics libraries in the end.
+Hence, servo cannot be compiled to WASM.
 
 We therefore decided to compile servo to a binary for now, and call it via FFI.
 Since we also won't be able to obtain the rendered image easily, we will only use servo up to the layouting.
