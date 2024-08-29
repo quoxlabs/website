@@ -114,7 +114,7 @@ For example, we may want to swap out our primitive composer for a faster Rust-ba
 It can potentially leverage parts of servo that we threw away earlier.
 
 As of today, the exact list of tasks to do at this stage is unclear.
-Once we have completed them, we are slowly going to transition into stage 4, the last stage of quox.
+Once we have completed them, we are slowly going to transition into stage 5, the last stage of quox.
 
 ## Stage 5: Perpetuity
 
