@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "quox"
   text: "Bring the web stack to the desktop"
-  tagline: "Built on TypeScript, Deno, servo, WebGPU, and FFI"
+  tagline: "Built on TypeScript, Deno, blitz, and FFI"
   actions:
     - theme: brand
       text: Read the Vision
@@ -22,3 +22,22 @@ features:
   - title: Outstanding DX
     details: A single JS context for your code, built-in security, trivial creation of binaries, and more tools out of the box
 ---
+
+# Quickstart
+
+quox lets you build a full desktop application in two lines of code and no build step.
+
+```tsx
+// main.tsx
+import { renderToWindow } from "https://quox.dev/";
+
+await renderToWindow(<h1>Hello, world!</h1>);
+```
+
+You can directly run this with [Deno](https://deno.com):
+
+```sh
+deno run https://quox.dev/try
+```
+
+Are you ready?

@@ -10,7 +10,8 @@ However, it is successful despite a number of serious drawbacks, mainly regardin
 quox fixes all of them at once by rethinking the entire stack of technologies.
 
 Instead of taking HTML, CSS, and JavaScript, and bundling both Node and Chromium with it into a gigantic executable, you can take a TSX file and run it directly.
-Windowing, layouting, composing, rendering, and input handling are all done via library calls.
+Windowing, layouting, composing, rendering, and input handling are all done via JavaScript libraries.
+They call into native code for performance reasons.
 
 Basically, with quox, a minimal example project has two lines of code and no build step.
 
@@ -32,15 +33,15 @@ and you have sucessfully created your first cross-platform desktop application w
 
 As a result, quox works quite differently from Electron.
 
-| Electron                                                                       | quox                                                       |
-| ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
-| Bundles Node                                                                   | Runs inside [Deno](https://deno.com)                       |
-| Bundles Chromium                                                               | Calls into [servo](https://servo.org/)                     |
-| Bundles HTML and CSS                                                           | Runs TSX natively                                          |
-| Has a complex build process                                                    | Has no build step                                          |
-| Runs JavaScript in several environments that differ slightly                   | Runs TypeScript in a single, clean environment             |
-| Spreads out an application across several processes, and connects them via IPC | Runs in a single process with wasm threads and web workers |
-| Cannot fully benefit from Chromium's security                                  | Fully benefits from Deno's security                        |
+| Electron                                                                       | quox                                               |
+| ------------------------------------------------------------------------------ | -------------------------------------------------- |
+| Bundles Node                                                                   | Runs inside [Deno](https://deno.com)               |
+| Bundles Chromium                                                               | Calls into [blitz](https://blitz.is/)              |
+| Bundles HTML and CSS                                                           | Runs TSX natively                                  |
+| Has a complex build process                                                    | Has no build step                                  |
+| Runs JavaScript in several environments that differ slightly                   | Runs TypeScript in a single, clean environment     |
+| Spreads out an application across several processes, and connects them via IPC | Runs in a single process with optional web workers |
+| Cannot fully benefit from Chromium's security                                  | Fully benefits from Deno's sandbox                 |
 
 Both quox and Electron have full system access, native graphics rendering performance, cross-platform support, and anything else you'd expect from a native application.
 
@@ -53,11 +54,8 @@ A direct consequence our approach is that quox can do things nobody else can do:
 
 ## What We Have
 
-quox is more than an idea.
-We have a concrete [plan](./plan).
-
-However, there is no demo yet.
-The above code snippet illustrates what we aim for, but it does not run yet.
+quox is in its very early stages and hardly useful in production yet.
+The above code snippet is a good demo of how far we got.
 
 We have implemented many individual parts of quox already, but there are still some core components that are missing.
 
