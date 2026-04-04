@@ -1,4 +1,4 @@
-/** @jsxImportSource npm:preact@10.29.1 */
+/** @jsxImportSource npm:preact */
 
 import { renderToWindow } from "jsr:@quoxlabs/quox";
 
