@@ -11,13 +11,13 @@ quox fixes all of them at once by rethinking the entire stack of technologies.
 
 Instead of taking HTML, CSS, and JavaScript, and bundling both Node and Chromium with it into a gigantic executable, you can take a TSX file and run it directly.
 Windowing, layouting, composing, rendering, and input handling are all done via JavaScript libraries.
-They call into native code for performance reasons.
+They use Wasm and WebGPU for performance and call into native code for system integration.
 
 Basically, with quox, a minimal example project has two lines of code and no build step.
 
 ```tsx
 // main.tsx
-import { renderToWindow } from "https://quox.dev/mod.ts";
+import { renderToWindow } from "jsr:@quoxlabs/quox";
 
 await renderToWindow(<h1>Hello, world!</h1>);
 ```
