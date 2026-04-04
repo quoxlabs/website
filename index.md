@@ -55,11 +55,11 @@ deno --allow-ffi https://quox.dev/main.tsx
 Current progress:
 
 | OS            | Support                    |
-| ------------- | -------------------------- |
-| Windows       | :white_check_mark: yes     |
-| Linux/X11     | :white_check_mark: yes     |
-| Linux/Wayland | :construction: in progress |
-| Mac           | :construction: in progress |
+| ------------- | -------------------------------- |
+| Windows       | :white_check_mark: yes                                         |
+| Linux/X11     | :white_check_mark: yes                                         |
+| Linux/Wayland | :white_check_mark: yes, with `--allow-env=WAYLAND_DISPLAY`    |
+| Mac           | :construction: in progress                                     |
 
 Are you ready?
 [Join us](https://github.com/quoxlabs/quox)!
