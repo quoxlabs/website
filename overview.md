@@ -22,11 +22,11 @@ import { renderToWindow } from "https://quox.dev/mod.ts";
 await renderToWindow(<h1>Hello, world!</h1>);
 ```
 
-The `renderToWindow` function then takes your TSX and does everything a browser does in order to bring it to the screen.
+The [`renderToWindow`](https://jsr.io/@quoxlabs/quox/doc/~/renderToWindow) function then takes your TSX and does everything a browser does in order to bring it to the screen.
 Just run
 
 ```sh
-deno run --allow-ffi main.tsx
+deno --allow-ffi main.tsx
 ```
 
 and you have sucessfully created your first cross-platform desktop application with quox.

@@ -1,12 +1,7 @@
-# Implementation Plan
+# Next Up
 
 Building quox is a complex endeavor.
-We are going to progress in several stages from a collection of experimental pieces to a uniform solution that just works.
-
-Initially, things will therefore be very broken and hard to use.
-As we move gradually out of the prototyping phase, we will focus more and more on providing clean abstractions and good documentation.
-
-Below, you can find a list of all the different stages we went through.
+Coming from first principles, this is what we had in mind since early 2023:
 
 ## First Principles
 
@@ -19,9 +14,9 @@ Coming from first principles, we can look at the following facts about existing 
 - Rendering a DOM needs graphics acceleration.
 - JavaScript has neither native performance nor does it run on a GPU.
 - blitz is an HTML rendering library written in Rust.
-- Rust can be compiled to WASM.
-- Deno can run WASM.
-- JavaScript can call into WASM.
+- Rust can be compiled to Wasm.
+- Deno can run Wasm.
+- JavaScript can call into Wasm.
 - blitz uses `wgpu` for its rendering.
 - Deno supports WebGPU, and it also uses the same `wgpu` crate for that.
 - Native application windows can be managed from C.
@@ -29,26 +24,23 @@ Coming from first principles, we can look at the following facts about existing 
 
 Consequently, we can
 
-1. compile blitz to WASM+WebGPU,
+1. compile blitz to Wasm+WebGPU,
 2. run it inside Deno, and
 3. write a thin layer of TS on top of it in order to connect it to native windows via FFI.
 
-That way, people could write TSX and then Deno would be able to parse it, hand it over to blitz, and receive back a rendered frame that could be passed to the OS via FFI.
+That way, people can write TSX and then Deno would be able to parse it, hand it over to blitz, and receive back a rendered frame that could be passed to the OS via FFI.
 
-Unfortunately, compiling blitz to wasm turns out not to be very straightforward.
-We therefore currently still compile it natively and ship binaries alongside the TS.
-This will hopefully change in the future.
+This is what we have done.
 
 ## Current Architecture
 
 Our current implementation can be found [on GitHub](https://github.com/quoxlabs/quox).
 
-A quox application consist of the following **four layers**:
+A quox application consist of the following **three layers**:
 
-- your application code
-- calls into the quox TypeScript package
-- which calls into the quox Rust layer that actually performs the windowing and rendering
-- which calls into native system libraries in order to communicate with the host system
+- your application code calls into the quox TypeScript package
+- which does all windowing via FFI, and calls into a WebAssembly+WebGPU renderer
+- which actually performs the layouting and rendering
 
 Most notably, **there is only one event loop**---the Deno event loop.
 It is used to pump all native windowing events, rendering, etc.
@@ -63,6 +55,6 @@ Deno has Web Workers if you need to perform heavy off-thread computations.
 ## Pending Tasks
 
 We have a lot of ideas, open questions, and pending work.
-Check out [the issue section on GitHub] to see our progress.
+Check out [the issue section on GitHub](https://github.com/quoxlabs/quox/issues) to see our progress.
 
 Consider helping out, too!
