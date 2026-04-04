@@ -29,7 +29,7 @@ quox lets you build a full desktop application in two lines of code and no build
 
 ```tsx
 // main.tsx
-import { renderToWindow } from "https://quox.dev/";
+import { renderToWindow } from "jsr:@quoxlabs/quox";
 
 await renderToWindow(<h1>Hello, world!</h1>);
 ```
@@ -37,7 +37,7 @@ await renderToWindow(<h1>Hello, world!</h1>);
 You can directly run this with [Deno](https://deno.com):
 
 ```sh
-deno run https://quox.dev/try.tsx
+deno --allow-ffi https://quox.dev/main.tsx
 ```
 
 Are you ready?
