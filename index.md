@@ -37,7 +37,7 @@ await renderToWindow(<h1>Hello, world!</h1>);
 You can directly run this with [Deno](https://deno.com):
 
 ```sh
-deno run https://quox.dev/try
+deno run https://quox.dev/try.tsx
 ```
 
 Are you ready?
