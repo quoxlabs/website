@@ -70,4 +70,4 @@ Don't expect a release in the next few weeks.
 It also means that we can give time to the underlying technologies to mature, and to impact their development in a direction that suits us.
 We are early, but not wrong.
 
-Come [join us](https://github.com/quoxlabs)!
+Come [join us](https://github.com/quoxlabs/quox)!
