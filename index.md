@@ -59,7 +59,7 @@ Current progress:
 | Windows       | :white_check_mark: yes                                     |
 | Linux/X11     | :white_check_mark: yes                                     |
 | Linux/Wayland | :white_check_mark: yes, with `--allow-env=WAYLAND_DISPLAY` |
-| Mac           | :white_check_mark: in progress                             |
+| Mac           | :white_check_mark: yes                                     |
 
 Are you ready?
 [Join us](https://github.com/quoxlabs/quox)!
