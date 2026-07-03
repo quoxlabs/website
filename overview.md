@@ -17,12 +17,12 @@ Basically, with quox, a minimal example project has two lines of code and no bui
 
 ```tsx
 // main.tsx
-import { renderToWindow } from "jsr:@quoxlabs/quox";
+import { openWindow } from "jsr:@quoxlabs/quox";
 
-await renderToWindow(<h1>Hello, world!</h1>);
+await openWindow(<h1>Hello, world!</h1>);
 ```
 
-The [`renderToWindow`](https://jsr.io/@quoxlabs/quox/doc/~/renderToWindow) function then takes your TSX and does everything a browser does in order to bring it to the screen.
+The [`openWindow`](https://jsr.io/@quoxlabs/quox/doc/~/openWindow) function then takes your TSX and does everything a browser does in order to bring it to the screen.
 Just run
 
 ```sh

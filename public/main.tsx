@@ -1,5 +1,5 @@
 /** @jsxImportSource npm:preact */
 
-import { renderToWindow } from "jsr:@quoxlabs/quox";
+import { openWindow } from "jsr:@quoxlabs/quox";
 
-await renderToWindow(<h1>Hello, world!</h1>);
+await openWindow(<h1>Hello, world!</h1>);
