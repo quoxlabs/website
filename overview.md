@@ -45,7 +45,7 @@ As a result, quox works quite differently from Electron.
 
 Both quox and Electron have full system access, native graphics rendering performance, cross-platform support, and anything else you'd expect from a native application.
 
-A direct consequence our approach is that quox can do things nobody else can do:
+A direct consequence of our approach is that quox can do things nobody else can do:
 
 1. Run a full desktop app from nothing but a URL via `deno run https://...`
 2. Deduplicate quox on disk (even across several indepdendent apps) if run from a URL
