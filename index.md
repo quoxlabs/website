@@ -20,7 +20,7 @@ features:
   - title: No Build Step
     details: quox projects can be as small as a single TSX file, and never require a build step
   - title: Bring your own stack
-    details: If it works with preact, it works with quox
+    details: If it works with `window.document`, it works with quox
   - title: Hardware-accelerated
     details: WebAssembly for the hot paths, GPU-acceleration for the rendering
   - title: Single JS context
@@ -30,7 +30,7 @@ features:
   - title: Run from URLs
     details: You can provide a URL for your users, and if they have Deno, they can directly run your entire application
   - title: Cross-platform compilation
-    details: Creating binaries for all target platforms takes seconds and is a single command way, no setup required
+    details: Creating binaries for all target platforms takes seconds and is a single command away, no setup required
 ---
 
 # Quickstart
